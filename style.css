@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --black: #000;
+  --white: #fff;
+  --bg-header: #092d38;
+  --bg-even: #06181c;
+  --bg-odd: #030b0d;
+  --bg-btn: #065e7c;
+  --remove: #f75a68;
+  --remove-hover: #fc3e77;
+  --text: #e1e1e6;
+  --placeholder: #7c7c8a;
+  --fav-none: #4e5455;
+}
+
+body * {
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  width: 100vw;
+
+  background: var(--black);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+#app {
+  margin: 6rem auto;
+  width: 96rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+header {
+  justify-content: space-between;
+  margin-bottom: 8rem;
+}
+
+.wrapper {
+  gap: 0.6rem;
+}
+
+#search {
+  width: 36rem;
+  padding: 0.6rem 1.6rem;
+
+  border: none;
+  border-radius: 0.6rem;
+
+  color: var(--white);
+  background: var(--bg-even);
+}
+
+#search::placeholder {
+  color: var(--placeholder);
+}
+
+#fav {
+  padding: 0.6rem 2.4rem;
+  border: none;
+  border-radius: 0.6rem;
+  justify-content: center;
+
+  color: var(--white);
+  background: var(--bg-btn);
+  cursor: pointer;
+
+  transition: all 0.3s ease-in-out;
+}
+
+#fav i {
+  font-size: 2rem;
+  margin: -0.3rem 0.6rem 0 0;
+}
+
+#fav:hover {
+  color: var(--bg-btn);
+  background: var(--white);
+}
+
+table * {
+  color: var(--text);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  outline: 1px solid var(--fav-none);
+  border-radius: 0.6rem;
+}
+
+table thead {
+  background: var(--bg-header);
+}
+
+table th {
+  padding: 1.2rem;
+  text-align: start;
+  font-size: 1.8rem;
+}
+
+table th:first-child {
+  border-top-left-radius: 0.6rem;
+}
+
+table th:last-child {
+  border-top-right-radius: 0.6rem;
+}
+
+tbody tr:nth-child(even) {
+  background: var(--bg-even);
+}
+
+tbody tr:nth-child(odd) {
+  background: var(--bg-odd);
+}
+
+table td {
+  padding: 0.8rem 1.2rem;
+}
+
+.user {
+  gap: 1.6rem;
+}
+
+.user img {
+  width: 5.6rem;
+  border-radius: 50%;
+}
+
+.user a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.user p {
+  font-weight: bold;
+}
+
+.user p:hover,
+.user span:hover {
+  color: var(--white);
+}
+
+#remove {
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: var(--remove);
+  cursor: pointer;
+
+  transition: all 0.2s ease-in-out;
+}
+
+#remove:hover {
+  transform: scale(1.1);
+  color: var(--remove-hover);
+}
+
+.defaultContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+
+  width: 100%;
+  height: 32rem;
+
+  text-align: center;
+  color: var(--fav-none);
+  font-size: 4rem;
+  font-weight: 700;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.defaultContent img {
+  width: 9.6rem;
+}

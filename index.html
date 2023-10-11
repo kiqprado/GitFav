@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./assets/Star.svg">
+    <title>GitFav</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="flex">
+        <img src="./assets/logo.svg" alt="" />
+        <div class="wrapper flex">
+          <label for="search" class="sr-only"
+            >Digite o usuário Github que quer favoritar</label
+          >
+          <input
+            type="text"
+            id="search"
+            placeholder="Digite o usuário Github que quer favoritar"
+          />
+          <button id="fav" class="flex">
+            <i class="ph ph-star"></i>
+            Favoritar
+          </button>
+        </div>
+      </header>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Usuário</th>
+            <th>Repositórios</th>
+            <th>Seguidores</th>
+            <th>Ação</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+   
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>
